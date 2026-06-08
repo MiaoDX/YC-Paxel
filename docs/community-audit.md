@@ -6,25 +6,33 @@ extract the client files locally, and audit the same shipped implementation.
 
 ## Steps
 
-1. Pull and extract the official image:
+1. Review the visual overview:
+
+   ```text
+   ARCHITECTURE.md
+   docs/diagrams/client-data-flow.svg
+   docs/diagrams/extracted-source-map.svg
+   ```
+
+2. Pull and extract the official image:
 
    ```bash
    ./scripts/extract-client-source.sh
    ```
 
-2. Generate a file hash manifest:
+3. Generate a file hash manifest:
 
    ```bash
    ./scripts/generate-source-manifest.sh
    ```
 
-3. Run the audit summary:
+4. Run the audit summary:
 
    ```bash
    ./scripts/audit-client-source.sh | tee tmp/audit.txt
    ```
 
-4. Inspect high-risk areas manually:
+5. Inspect high-risk areas manually:
 
    ```bash
    sed -n '1,120p' extracted/paxel-client/rails/bin/client-entrypoint

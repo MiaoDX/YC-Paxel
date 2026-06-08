@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">YC-Paxel inspection repository workflow</title>
+  <desc id="desc">A diagram showing that this repository stores scripts and documentation, pulls the official Paxel Docker image, extracts the client source locally, then generates ignored audit artifacts.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2f4b7c"/>
+    </marker>
+    <style>
+      .bg { fill: #fbfbfd; }
+      .box { fill: #ffffff; stroke: #2f4b7c; stroke-width: 2; rx: 8; }
+      .soft { fill: #f2f6ff; stroke: #5579bd; stroke-width: 2; rx: 8; }
+      .warn { fill: #fff6e5; stroke: #c77700; stroke-width: 2; rx: 8; }
+      .ignored { fill: #f3f3f3; stroke: #777777; stroke-width: 2; stroke-dasharray: 8 6; rx: 8; }
+      .title { font: 700 24px Arial, sans-serif; fill: #17233c; }
+      .h { font: 700 18px Arial, sans-serif; fill: #17233c; }
+      .t { font: 14px Arial, sans-serif; fill: #26364f; }
+      .small { font: 12px Arial, sans-serif; fill: #4d5d73; }
+      .arrow { stroke: #2f4b7c; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .label { font: 13px Arial, sans-serif; fill: #2f4b7c; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="620"/>
+  <text class="title" x="40" y="46">YC-Paxel Inspection Repo Workflow</text>
+  <text class="t" x="40" y="72">The repo publishes repeatable inspection tools, not a mirror of YC's unlicensed client source snapshot.</text>
+
+  <rect class="box" x="50" y="130" width="250" height="145"/>
+  <text class="h" x="75" y="165">This GitHub repo</text>
+  <text class="t" x="75" y="195">README and docs</text>
+  <text class="t" x="75" y="218">Extraction script</text>
+  <text class="t" x="75" y="241">Audit and manifest scripts</text>
+  <text class="small" x="75" y="262">License: AGPL-3.0-only for repo files</text>
+
+  <rect class="soft" x="420" y="130" width="270" height="145"/>
+  <text class="h" x="445" y="165">Official Paxel image</text>
+  <text class="t" x="445" y="195">ghcr.io/yc-software/</text>
+  <text class="t" x="445" y="218">paxel-client:latest</text>
+  <text class="small" x="445" y="246">Pulled by Docker from GHCR</text>
+
+  <rect class="ignored" x="820" y="120" width="285" height="165"/>
+  <text class="h" x="845" y="160">Local extracted tree</text>
+  <text class="t" x="845" y="190">extracted/paxel-client/rails</text>
+  <text class="t" x="845" y="214">Contains /rails client snapshot</text>
+  <text class="small" x="845" y="244">Ignored by git</text>
+  <text class="small" x="845" y="264">Not redistributed by this repo</text>
+
+  <rect class="ignored" x="225" y="390" width="285" height="130"/>
+  <text class="h" x="250" y="430">Generated manifest</text>
+  <text class="t" x="250" y="460">manifests/paxel-client/</text>
+  <text class="t" x="250" y="484">SHA256SUMS.tsv</text>
+  <text class="small" x="250" y="505">Ignored local verification artifact</text>
+
+  <rect class="box" x="640" y="390" width="285" height="130"/>
+  <text class="h" x="665" y="430">Audit output</text>
+  <text class="t" x="665" y="460">Network references</text>
+  <text class="t" x="665" y="484">Mount paths and file hotspots</text>
+  <text class="small" x="665" y="505">Share findings, not source mirror</text>
+
+  <rect class="warn" x="845" y="390" width="285" height="130"/>
+  <text class="h" x="870" y="430">License boundary</text>
+  <text class="t" x="870" y="460">No Paxel source license found</text>
+  <text class="t" x="870" y="484">Paxel Terms restrictions linked</text>
+  <text class="small" x="870" y="505">Official YC license would control</text>
+
+  <path class="arrow" d="M300 202 C350 202 370 202 420 202"/>
+  <text class="label" x="324" y="190">pull image</text>
+
+  <path class="arrow" d="M690 202 C750 202 770 202 820 202"/>
+  <text class="label" x="720" y="190">docker cp /rails</text>
+
+  <path class="arrow" d="M900 285 C835 350 650 360 510 425"/>
+  <text class="label" x="606" y="354">hash files</text>
+
+  <path class="arrow" d="M963 285 C963 330 880 355 790 390"/>
+  <text class="label" x="878" y="340">audit locally</text>
+
+  <path class="arrow" d="M925 285 C955 330 980 350 988 390"/>
+  <text class="label" x="988" y="344">keep boundary visible</text>
+</svg>
+

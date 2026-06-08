@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Extracted Paxel client source map</title>
+  <desc id="desc">A map of the extracted Rails client tree with app services, models, tasks, config, database schema, entrypoint, and bundled dependencies.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#235b4e"/>
+    </marker>
+    <style>
+      .bg { fill: #fcfcfa; }
+      .root { fill: #ecf8f4; stroke: #235b4e; stroke-width: 2.5; rx: 10; }
+      .box { fill: #ffffff; stroke: #235b4e; stroke-width: 2; rx: 8; }
+      .soft { fill: #f3fbf8; stroke: #4f907f; stroke-width: 2; rx: 8; }
+      .dep { fill: #f5f5f5; stroke: #777777; stroke-width: 2; rx: 8; }
+      .title { font: 700 24px Arial, sans-serif; fill: #12342e; }
+      .h { font: 700 17px Arial, sans-serif; fill: #12342e; }
+      .t { font: 14px Arial, sans-serif; fill: #263f3a; }
+      .small { font: 12px Arial, sans-serif; fill: #5b6d68; }
+      .arrow { stroke: #235b4e; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .count { font: 700 13px Arial, sans-serif; fill: #235b4e; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+  <text class="title" x="40" y="46">Extracted `/rails` Client Source Map</text>
+  <text class="t" x="40" y="72">What reviewers see after running `./scripts/extract-client-source.sh`.</text>
+
+  <rect class="root" x="470" y="110" width="260" height="92"/>
+  <text class="h" x="510" y="150">/rails</text>
+  <text class="t" x="510" y="176">Rails client app snapshot</text>
+  <text class="small" x="510" y="194">Version 0.3.39.1</text>
+
+  <rect class="box" x="80" y="275" width="250" height="155"/>
+  <text class="h" x="105" y="310">bin/</text>
+  <text class="t" x="105" y="338">client-entrypoint</text>
+  <text class="t" x="105" y="362">rails</text>
+  <text class="t" x="105" y="386">rake</text>
+  <text class="small" x="105" y="412">Starts local DB, then analyzer task</text>
+
+  <rect class="box" x="405" y="250" width="360" height="205"/>
+  <text class="h" x="430" y="286">app/services/</text>
+  <text class="count" x="430" y="310">Analyzer and pipeline logic</text>
+  <text class="t" x="430" y="338">client_pipeline.rb</text>
+  <text class="t" x="430" y="362">transcript_discoverer/chunker</text>
+  <text class="t" x="430" y="386">session_narrative_analyzer</text>
+  <text class="t" x="430" y="410">episode_summarizer, decision tools</text>
+  <text class="t" x="430" y="434">local_code_quality_analyzer</text>
+
+  <rect class="box" x="840" y="275" width="280" height="155"/>
+  <text class="h" x="865" y="310">app/models/</text>
+  <text class="count" x="865" y="334">Local analysis records</text>
+  <text class="t" x="865" y="362">Upload, Project, Session</text>
+  <text class="t" x="865" y="386">Chunk, Episode, Decision</text>
+  <text class="t" x="865" y="410">LlmCall, ProcessingRun</text>
+
+  <rect class="soft" x="80" y="520" width="250" height="125"/>
+  <text class="h" x="105" y="555">lib/tasks/</text>
+  <text class="t" x="105" y="585">analyze_local.rake</text>
+  <text class="t" x="105" y="609">pending_uploads.rake</text>
+  <text class="small" x="105" y="632">Rake entrypoints</text>
+
+  <rect class="soft" x="405" y="520" width="260" height="125"/>
+  <text class="h" x="430" y="555">config/</text>
+  <text class="t" x="430" y="585">database.yml, routes.rb</text>
+  <text class="t" x="430" y="609">production.rb</text>
+  <text class="t" x="430" y="633">sentry_client initializer</text>
+
+  <rect class="soft" x="720" y="520" width="220" height="125"/>
+  <text class="h" x="745" y="555">db/</text>
+  <text class="t" x="745" y="585">client_schema.rb</text>
+  <text class="t" x="745" y="609">decision_catalog.json</text>
+  <text class="small" x="745" y="632">Local SQLite shape</text>
+
+  <rect class="dep" x="990" y="520" width="160" height="125"/>
+  <text class="h" x="1015" y="555">Bundled gems</text>
+  <text class="t" x="1015" y="585">/usr/local/bundle</text>
+  <text class="small" x="1015" y="614">Rails, Faraday,</text>
+  <text class="small" x="1015" y="634">Sentry, Anthropic</text>
+
+  <path class="arrow" d="M470 172 C350 210 250 235 205 275"/>
+  <path class="arrow" d="M585 202 C585 220 585 230 585 250"/>
+  <path class="arrow" d="M730 172 C825 210 925 235 980 275"/>
+  <path class="arrow" d="M520 202 C350 355 245 445 205 520"/>
+  <path class="arrow" d="M600 202 C560 360 540 450 535 520"/>
+  <path class="arrow" d="M665 202 C755 365 805 455 830 520"/>
+  <path class="arrow" d="M725 184 C920 320 1015 430 1070 520"/>
+</svg>
+

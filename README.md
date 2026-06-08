@@ -51,6 +51,15 @@ Generate hashes and run a basic audit summary:
 ./scripts/audit-client-source.sh | tee tmp/audit.txt
 ```
 
+## Visual Architecture
+
+For a diagram-first overview of how this repository, the extracted `/rails` tree,
+and the Paxel client analyzer fit together, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+- [Repository workflow](docs/diagrams/repo-workflow.svg)
+- [Extracted client source map](docs/diagrams/extracted-source-map.svg)
+- [Client analyzer data flow](docs/diagrams/client-data-flow.svg)
+
 ## What Is In The Image
 
 Based on the current published image inspected on 2026-06-08:
