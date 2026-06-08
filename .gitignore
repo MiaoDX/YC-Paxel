@@ -1,0 +1,9 @@
+extracted/
+tmp/
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.log
+.DS_Store
+
