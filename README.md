@@ -44,6 +44,13 @@ extracted/paxel-client/rails/
 
 The `extracted/` directory is intentionally ignored by git.
 
+Generate hashes and run a basic audit summary:
+
+```bash
+./scripts/generate-source-manifest.sh
+./scripts/audit-client-source.sh | tee tmp/audit.txt
+```
+
 ## What Is In The Image
 
 Based on the current published image inspected on 2026-06-08:
@@ -80,3 +87,16 @@ published Docker image. This repository does not relicense those files. If YC
 publishes an official open-source repository and license, prefer the official
 repository and treat this project as obsolete.
 
+## Why The Extracted Source Is Not Committed
+
+The purpose of this project is community safety review, but the inspected image
+does not contain a license granting redistribution rights for the Paxel client
+source snapshot. Paxel's own Terms also place restrictions on reverse engineering
+and extracting underlying systems.
+
+For that reason, this repository publishes the extraction and audit workflow,
+not the extracted third-party source. Reviewers can independently pull the
+official image, extract the same `/rails` tree locally, generate a hash manifest,
+and inspect it without trusting a third-party mirror.
+
+See [Community Audit Workflow](docs/community-audit.md) for the review process.
