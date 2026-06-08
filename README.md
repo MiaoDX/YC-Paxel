@@ -19,8 +19,8 @@ running it against private transcripts.
 
 This repository does **not** commit the extracted Paxel/Y Combinator source code.
 The client image includes a Rails application under `/rails`, but the image does
-not include a project license file or git history. The MIT license in this repo
-applies only to the documentation and scripts authored here.
+not include a project license file or git history. The AGPL-3.0-only license in
+this repo applies only to the documentation and scripts authored here.
 
 ## Quick Start
 
@@ -80,12 +80,27 @@ tests, a Dockerfile, or a project license file.
 
 ## License Boundary
 
-The extraction script and this documentation are MIT licensed.
+The extraction script and this documentation are AGPL-3.0-only licensed.
 
 The extracted Paxel client files are third-party materials from Y Combinator's
 published Docker image. This repository does not relicense those files. If YC
 publishes an official open-source repository and license, prefer the official
 repository and treat this project as obsolete.
+
+## Paxel Terms Reference
+
+Paxel's public Terms are here:
+
+https://paxel.ycombinator.com/terms
+
+The relevant section is **Restrictions**. The text includes this restriction:
+
+> you agree not to ... reverse engineer or attempt to extract underlying models,
+> algorithms, or systems
+
+This repository links to that restriction directly in the README because the
+project exists to support community safety review while keeping the third-party
+code redistribution boundary visible.
 
 ## Why The Extracted Source Is Not Committed
 

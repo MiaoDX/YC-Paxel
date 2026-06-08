@@ -3,7 +3,8 @@
 This repository contains original documentation and scripts for local inspection
 of the Paxel client Docker image.
 
-The MIT license in this repository applies only to those original files.
+The AGPL-3.0-only license in this repository applies only to those original
+files.
 
 It does not apply to:
 
@@ -22,6 +23,21 @@ Because there is no explicit permission to redistribute or relicense the Paxel
 client snapshot, this repository keeps extracted files out of git. The extraction
 script writes them into `extracted/`, which is ignored.
 
+## Paxel Terms Restriction
+
+Paxel's public Terms are available at:
+
+https://paxel.ycombinator.com/terms
+
+The **Restrictions** section includes this phrase:
+
+> reverse engineer or attempt to extract underlying models, algorithms, or
+> systems
+
+This is not an open-source license grant. It is one of the reasons this
+repository publishes an independent extraction and audit workflow instead of a
+mirror of the extracted client tree.
+
 ## Official Links
 
 - Paxel: https://paxel.ycombinator.com/
@@ -29,4 +45,3 @@ script writes them into `extracted/`, which is ignored.
 - Terms: https://paxel.ycombinator.com/terms
 - Upload script: https://paxel.ycombinator.com/upload.sh
 - Container package: https://github.com/orgs/yc-software/packages/container/package/paxel-client
-

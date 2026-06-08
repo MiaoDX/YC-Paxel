@@ -61,3 +61,6 @@ When sharing findings publicly, prefer:
 Avoid publishing the full extracted tree unless YC provides an explicit license
 or other redistribution permission.
 
+Paxel's Terms are at https://paxel.ycombinator.com/terms. The **Restrictions**
+section includes a restriction against attempting to extract underlying models,
+algorithms, or systems. Keep that boundary in mind when sharing audit results.
